@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    
+    <style>
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  #F3D8C7;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box {
+    background-color: white;
+    padding: 60px; /* Increased padding for larger size */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px; /* Increased width */
+}
+
+h2 {
+    margin-bottom: 30px; /* Increased spacing */
+    font-size: 28px; /* Bigger font size */
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 25px; /* Increased spacing */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px; /* Increased font size */
+    outline: none;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #7ebaf5;
+}
+
+.login-btn {
+    background-color: #7ebaf5;
+    color: white;
+    padding: 15px; /* Increased button padding */
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #6aa8e3;
+}
+
+.google-login {
+    display: block;
+    margin-top: 20px; /* Increased spacing */
+    text-decoration: none;
+    font-size: 16px; /* Increased font size */
+    color: #333;
+    transition: color 0.3s;
+}
+
+.google-login:hover {
+    color: #4285F4;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Welcome</h2>
+            <form>
+                <div class="input-group">
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">Log In</button>
+                <a href="index.php" class="google-login">Log in with Google</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
