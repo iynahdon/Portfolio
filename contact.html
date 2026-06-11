@@ -1,109 +1,310 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | Dona R.</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#241911",
+                    "outline": "#80756e",
+                    "surface-variant": "#e1e3e4",
+                    "on-surface-variant": "#4e453f",
+                    "primary": "#6e5a4d",
+                    "surface-container": "#edeeef",
+                    "surface-bright": "#f8f9fa",
+                    "surface-warm": "#F3D8C7",
+                    "tertiary-fixed": "#f4ded1",
+                    "tertiary-fixed-dim": "#d7c3b6",
+                    "inverse-on-surface": "#f0f1f2",
+                    "primary-container": "#f3d8c7",
+                    "on-primary-fixed-variant": "#554337",
+                    "on-secondary-container": "#636262",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "surface-container-low": "#f3f4f5",
+                    "outline-variant": "#d2c4bc",
+                    "surface-container-high": "#e7e8e9",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#2e3132",
+                    "tertiary": "#6b5b51",
+                    "on-primary-fixed": "#26190e",
+                    "background": "#f8f9fa",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#5f5e5e",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#dbc2b1",
+                    "primary-fixed-dim": "#dbc2b1",
+                    "text-main": "#1A1A1A",
+                    "on-surface": "#191c1d",
+                    "on-tertiary": "#ffffff",
+                    "text-muted": "#555555",
+                    "surface-dim": "#d9dadb",
+                    "surface-container-highest": "#e1e3e4",
+                    "secondary-fixed": "#e5e2e1",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#e2dfde",
+                    "surface-tint": "#6e5a4d",
+                    "on-primary-container": "#715d50",
+                    "on-tertiary-container": "#6d5e54",
+                    "on-background": "#191c1d",
+                    "tertiary-container": "#eed9cc",
+                    "on-tertiary-fixed-variant": "#52443b",
+                    "on-error": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "primary-fixed": "#f9ddcc",
+                    "border-subtle": "rgba(26, 26, 26, 0.1)",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-padding": "80px",
+                    "stack-md": "24px",
+                    "unit": "8px",
+                    "stack-lg": "48px",
+                    "gutter": "24px",
+                    "container-max": "1200px",
+                    "stack-sm": "12px"
+            },
+            "fontFamily": {
+                    "nav-link": ["Manrope"],
+                    "body-md": ["Inter"],
+                    "label-md": ["JetBrains Mono"],
+                    "headline-md": ["Manrope"],
+                    "headline-sm": ["Manrope"],
+                    "display-lg": ["Manrope"],
+                    "display-lg-mobile": ["Manrope"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "nav-link": ["16px", { "lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                    "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                    "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                    "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                    "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                    "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                    "display-lg-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "800" }],
+                    "body-lg": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
         body {
-    font-family: Arial, sans-serif;
-    background-color: #F3D8C7;
-    margin: 0;
-    padding: 20px;
-}
-
-.contact-container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-top: 100px;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.icon {
-    font-size: 30px;
-    color: #555;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.icon:hover {
-    color: #007bff; /* Change color on hover */
-}
-nav a {
-            margin: 0 15px;
-            color: black;
-            text-decoration: none;
-            font-weight: 500;
-            text-align: center;
+            background-color: #f8f9fa; /* background from theme */
         }
-
-        nav a:hover {
-            color: #555;
-            text-decoration: underline;
+        .form-input-focus:focus {
+            outline: none;
+            border-color: #6b5b51; /* tertiary color */
+            box-shadow: 0 4px 12px rgba(107, 91, 81, 0.05);
         }
-        a{
-            font-size: 21px;
-            
+        .floating-label-group {
+            position: relative;
         }
-        .heading {
-            text-align: left;
-            font-size: 33px;
-            font-weight: bold;
-            padding: 20px 50px;
-            text-align: center;
-            padding-bottom: 45px;
+        .floating-label-group label {
+            position: absolute;
+            left: 0;
+            top: 0.75rem;
+            transition: all 0.2s ease;
+            pointer-events: none;
         }
-        .con{
-            text-align: center;
+        .floating-label-group input:focus + label,
+        .floating-label-group input:not(:placeholder-shown) + label,
+        .floating-label-group textarea:focus + label,
+        .floating-label-group textarea:not(:placeholder-shown) + label {
+            transform: translateY(-1.5rem);
+            font-size: 0.875rem;
+            color: #6e5a4d;
         }
-        footer {
-    text-align: center;
-    background-color: #f8f9fa;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding-bottom: 4px;
-}
-
     </style>
 </head>
-<body>
-    <div class="heading">
-        Portfolio
-    </div>
-    <nav class="con">
-        <a href="front.html" target="_blank">Home</a>
-        <a href="about.html" target="_blank">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-    </nav>
-    <div class="contact-container">
-        <h2>Contact Me</h2>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/iynahdon/" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/iynahdon" target="_blank" class="icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://telegram.org" target="_blank" class="icon"><i class="fab fa-telegram"></i></a>
-            <a href="https://twitter.com" target="_blank" class="icon"><i class="fab fa-twitter"></i></a>
-        </div>
-    </div>
-    <footer>
-        <p>© 2024 Dona Remeticado | All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<body class="antialiased text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md">
+<div class="max-w-container-max mx-auto px-gutter h-20 flex justify-between items-center">
+<a class="font-headline-sm text-headline-sm font-bold text-secondary dark:text-secondary-fixed" href="front.html">Dona R.</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-nav-link text-nav-link uppercase tracking-wider text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-all duration-300" href="#">Home</a>
+<a class="font-nav-link text-nav-link uppercase tracking-wider text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-all duration-300" href="#">About</a>
+<a class="font-nav-link text-nav-link uppercase tracking-wider text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-all duration-300" href="#">Projects</a>
+<a class="font-nav-link text-nav-link uppercase tracking-wider text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="#">Contact</a>
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-full font-nav-link text-nav-link hover:bg-primary transition-colors duration-300 Active:opacity-80 scale-95 transition-transform">Hire Me</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-secondary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-section-padding">
+<div class="max-w-container-max mx-auto px-gutter">
+<!-- Hero Header -->
+<div class="max-w-3xl mb-stack-lg">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest mb-4 block">Get in touch</span>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-main mb-6 leading-tight">Let's build something significant together.</h1>
+<p class="font-body-lg text-body-lg text-muted max-w-2xl">Currently open to consulting, project collaborations, or just a technical chat over coffee.</p>
+</div>
+<!-- Main Content Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-stack-lg items-start">
+<!-- Contact Form Section (Bento-like Card) -->
+<div class="lg:col-span-7 bg-white p-8 md:p-12 rounded-xl shadow-[0_8px_30px_rgba(26,26,26,0.06)] border border-border-subtle">
+<form action="#" class="space-y-10" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="floating-label-group">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 font-body-md text-body-md form-input-focus transition-all duration-300" id="name" name="name" placeholder=" " required="" type="text"/>
+<label class="font-body-md text-body-md text-secondary" for="name">Full Name</label>
+</div>
+<div class="floating-label-group">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 font-body-md text-body-md form-input-focus transition-all duration-300" id="email" name="email" placeholder=" " required="" type="email"/>
+<label class="font-body-md text-body-md text-secondary" for="email">Email Address</label>
+</div>
+</div>
+<div class="floating-label-group">
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-3 font-body-md text-body-md form-input-focus transition-all duration-300 resize-none" id="message" name="message" placeholder=" " required="" rows="4"></textarea>
+<label class="font-body-md text-body-md text-secondary" for="message">Tell me about your project</label>
+</div>
+<div class="pt-4">
+<button class="group flex items-center justify-center space-x-3 bg-secondary text-on-secondary px-10 py-4 rounded-full font-headline-sm text-headline-sm hover:bg-primary transition-all duration-300 shadow-md" type="submit">
+<span>Send Message</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Info and Socials -->
+<div class="lg:col-span-5 space-y-stack-md">
+<!-- Contact Methods Card -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-border-subtle">
+<h3 class="font-headline-sm text-headline-sm text-main mb-6">Connect Directly</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="bg-primary-container p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-secondary uppercase">Email</p>
+<a class="font-body-lg text-body-lg text-main hover:text-primary transition-colors" href="mailto:hello@donarem.tech">dremeticado21@gmail.com</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-primary-container p-3 rounded-lg text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-secondary uppercase">Based In</p>
+<p class="font-body-lg text-body-lg text-main">Tibungco, Davao City, Philippines</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Networks Grid -->
+<div class="grid grid-cols-2 gap-4">
+<a class="flex flex-col items-center justify-center p-6 bg-white border border-border-subtle rounded-xl hover:bg-surface-warm transition-all duration-300 group" href="#">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container rounded-full mb-3 group-hover:bg-white">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">share</span>
+</div>
+<span class="font-nav-link text-nav-link text-main">LinkedIn</span>
+</a>
+<a class="flex flex-col items-center justify-center p-6 bg-white border border-border-subtle rounded-xl hover:bg-surface-warm transition-all duration-300 group" href="#">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container rounded-full mb-3 group-hover:bg-white">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">code</span>
+</div>
+<span class="font-nav-link text-nav-link text-main">GitHub</span>
+</a>
+<a class="flex flex-col items-center justify-center p-6 bg-white border border-border-subtle rounded-xl hover:bg-surface-warm transition-all duration-300 group" href="#">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container rounded-full mb-3 group-hover:bg-white">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">rocket</span>
+</div>
+<span class="font-nav-link text-nav-link text-main">Twitter</span>
+</a>
+<a class="flex flex-col items-center justify-center p-6 bg-white border border-border-subtle rounded-xl hover:bg-surface-warm transition-all duration-300 group" href="#">
+<div class="w-12 h-12 flex items-center justify-center bg-surface-container rounded-full mb-3 group-hover:bg-white">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary">draw</span>
+</div>
+<span class="font-nav-link text-nav-link text-main">Dribbble</span>
+</a>
+</div>
+<!-- Decorative Image -->
+<div class="h-64 relative rounded-xl overflow-hidden shadow-sm">
+<img alt="Modern Office" class="w-full h-full object-cover grayscale opacity-80" data-alt="A serene, minimalist architectural office space captured with soft morning light streaming through large windows. The interior features warm wood textures, clean white walls, and a few thriving indoor plants. The atmosphere is quiet and focused, emphasizing professional craftsmanship and modern technical warmth in a corporate but approachable setting. High-quality editorial photography style with soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrHowT56UjTTjrMGmjetI_weAASrQ2gI1bYSiiyoZbJORlFW8fA_-YOeqsPSV6GUir6CkYFyZzyTcY8mWc_qHMl9IgbnVFr9e1U7KaImmvVW_Yzm7ofKVBr06LvYL5PYgtLzC-0CG56kTPGZYNg2Dxms7E_seRX--Iibnh6u6XQh985SR9N-CtKfUgIcta9uqlp2hlMcM23Azn4U9ehrZKCqAiF2gFcf_dKjAOg3RYfpqP_LZdOqwahIu2F7D7xDtJBHdXJIkEqWM"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<p class="font-label-md text-label-md opacity-90 uppercase">Current Status</p>
+<p class="font-headline-sm text-headline-sm font-bold">Open for new projects</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-padding bg-surface-container dark:bg-inverse-surface">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-headline-sm text-headline-sm text-secondary dark:text-secondary-fixed mb-4">Dona Remeticado.</span>
+<p class="font-body-md text-body-md text-on-secondary-container/70 dark:text-on-secondary-fixed-variant/70 text-center md:text-left">© 2024 Dona Remeticado. Built with technical warmth.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-body-md text-body-md text-on-secondary-container/70 dark:text-on-secondary-fixed-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-secondary-container/70 dark:text-on-secondary-fixed-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-on-secondary-container/70 dark:text-on-secondary-fixed-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out" href="#">Twitter</a>
+<a class="font-body-md text-body-md text-on-secondary-container/70 dark:text-on-secondary-fixed-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 ease-in-out" href="#">Email</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for form labels and submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span><span>Sending...</span>';
+            btn.classList.add('opacity-80', 'pointer-events-none');
+            
+            // Simulating API call
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span><span>Message Sent!</span>';
+                btn.classList.remove('bg-secondary');
+                btn.classList.add('bg-green-600');
+                this.reset();
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('bg-green-600', 'opacity-80', 'pointer-events-none');
+                    btn.classList.add('bg-secondary');
+                }, 3000);
+            }, 1500);
+        });
+
+        // Add subtle parallax effect on image scroll
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const img = document.querySelector('img[data-alt]');
+            if(img) {
+                img.style.transform = `translateY(${scroll * 0.05}px)`;
+            }
+        });
+    </script>
+</body></html>

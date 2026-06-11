@@ -1,127 +1,353 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color:  #F3D8C7;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 23px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 100px;
-            
-        }
-        h1 {
-            color: #3a3a3a;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .profile-pic {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .skills {
-            list-style: none;
-            padding: 0;
-        }
-        .skills li {
-            background-color: #efefef;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
-        }
-        nav a {
-            margin: 0 15px;
-            color: black;
-            text-decoration: none;
-            font-weight: 500;
-            text-align: center;
-        }
 
-        nav a:hover {
-            color: #555;
-            text-decoration: underline;
-        }
-        a{
-            font-size: 21px;
-            
-        }
-        .heading {
-            text-align: left;
-            font-size: 33px;
-            font-weight: bold;
-            padding: 20px 50px;
-            text-align: center;
-            padding-bottom: 45px;
-        }
-        .con{
-            text-align: center;
-        }
-        footer {
-    text-align: center;
-    background-color: #f8f9fa;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding-top: 3px;
-    padding-bottom: 1px;
-}
-    </style>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About | Dona R.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;700;800&family=JetBrains+Mono:wght@500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "secondary-fixed-dim": "#c8c6c5",
+                  "surface-container-lowest": "#ffffff",
+                  "on-tertiary-fixed": "#241911",
+                  "outline": "#80756e",
+                  "surface-variant": "#e1e3e4",
+                  "on-surface-variant": "#4e453f",
+                  "primary": "#6e5a4d",
+                  "surface-container": "#edeeef",
+                  "surface-bright": "#f8f9fa",
+                  "surface-warm": "#F3D8C7",
+                  "tertiary-fixed": "#f4ded1",
+                  "tertiary-fixed-dim": "#d7c3b6",
+                  "inverse-on-surface": "#f0f1f2",
+                  "primary-container": "#f3d8c7",
+                  "on-primary-fixed-variant": "#554337",
+                  "on-secondary-container": "#636262",
+                  "on-secondary-fixed-variant": "#474746",
+                  "on-secondary-fixed": "#1c1b1b",
+                  "surface-container-low": "#f3f4f5",
+                  "outline-variant": "#d2c4bc",
+                  "surface-container-high": "#e7e8e9",
+                  "on-error-container": "#93000a",
+                  "inverse-surface": "#2e3132",
+                  "tertiary": "#6b5b51",
+                  "on-primary-fixed": "#26190e",
+                  "background": "#f8f9fa",
+                  "on-secondary": "#ffffff",
+                  "secondary": "#5f5e5e",
+                  "error": "#ba1a1a",
+                  "inverse-primary": "#dbc2b1",
+                  "primary-fixed-dim": "#dbc2b1",
+                  "text-main": "#1A1A1A",
+                  "on-surface": "#191c1d",
+                  "on-tertiary": "#ffffff",
+                  "text-muted": "#555555",
+                  "surface-dim": "#d9dadb",
+                  "surface-container-highest": "#e1e3e4",
+                  "secondary-fixed": "#e5e2e1",
+                  "error-container": "#ffdad6",
+                  "secondary-container": "#e2dfde",
+                  "surface-tint": "#6e5a4d",
+                  "on-primary-container": "#715d50",
+                  "on-tertiary-container": "#6d5e54",
+                  "on-background": "#191c1d",
+                  "tertiary-container": "#eed9cc",
+                  "on-tertiary-fixed-variant": "#52443b",
+                  "on-error": "#ffffff",
+                  "surface": "#f8f9fa",
+                  "primary-fixed": "#f9ddcc",
+                  "border-subtle": "rgba(26, 26, 26, 0.1)",
+                  "on-primary": "#ffffff"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "section-padding": "80px",
+                  "stack-md": "24px",
+                  "unit": "8px",
+                  "stack-lg": "48px",
+                  "gutter": "24px",
+                  "container-max": "1200px",
+                  "stack-sm": "12px"
+          },
+          "fontFamily": {
+                  "nav-link": ["Manrope"],
+                  "body-md": ["Inter"],
+                  "label-md": ["JetBrains Mono"],
+                  "headline-md": ["Manrope"],
+                  "headline-sm": ["Manrope"],
+                  "display-lg": ["Manrope"],
+                  "display-lg-mobile": ["Manrope"],
+                  "body-lg": ["Inter"]
+          },
+          "fontSize": {
+                  "nav-link": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                  "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                  "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                  "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                  "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                  "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                  "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                  "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+    .ambient-shadow {
+      box-shadow: 0 8px 30px rgba(26, 26, 26, 0.06);
+    }
+    .ghost-outline {
+      border: 1px solid rgba(26, 26, 26, 0.1);
+    }
+    .text-balance { text-wrap: balance; }
+  </style>
 </head>
-<body>
-    <div class="heading">
-        Portfolio
-    </div>
-    <nav class="con">
-        <a href="front.html" target="_blank">Home</a>
-        <a href="about.html" target="_blank">About</a>
-        <a href="#">Projects</a>
-        <a href="contact.html" target="_blank">Contact</a>
-    </nav>
-    <div class="container">
-        <img src="pic.jpg" class="profile-pic">
-        <h1>About Me</h1>
-        <p>Hi, I am Dona Remeticado, 21 years of age I was born on May 15, 2003, in the province of Leyte, Tacloban City Hospital.
-             I live in Vicenta Gloria Village Purok-4 Tibungco, Davao City I am pure Filipino and my religion is Catholic. 
-             My Mother is Ivy G. Remeticado she is 40 years of age and was also born on June 13, 1984, and I am the only child in our family. 
-             I graduated from Sto Niño Elementary School batch 2016, in high school I graduated from F.Bustamante National High School batch 2020, 
-             in Señior High School I graduated from Gabriel Taborin College of Davao Foundation Inc., batch 2022, 
-             and I am currently studying college in Davao del Norte State College. 
-
-        </p>
-        
-        <h2>Skills</h2>
-        <ul class="skills">
-            <li>Web Development</li>
-            <li>Multitasking</li>
-        
-        </ul>
-        
-        <h2>Hobbies</h2>
-        <p>In my free time, I enjoy reading fictional books, singing, dancing, watching k-dramas or movies, and sometimes playing online games.
-             These activities help me stay creative and energized!
+<body class="bg-surface text-on-surface font-body-md antialiased">
+<!-- TopNavBar Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md">
+<div class="max-w-container-max mx-auto px-gutter h-20 flex justify-between items-center">
+<div class="font-headline-sm text-headline-sm font-bold text-secondary dark:text-secondary-fixed">Dona R.</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-nav-link text-nav-link uppercase tracking-wider text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="front.html">Home</a>
+<a class="font-nav-link text-nav-link uppercase tracking-wider text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="about.html">About</a>
+<a class="font-nav-link text-nav-link uppercase tracking-wider text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="projects.html">Projects</a>
+<a class="font-nav-link text-nav-link uppercase tracking-wider text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="contact.html">Contact</a>
+<button class="bg-secondary text-surface px-6 py-2 rounded-full font-nav-link text-nav-link uppercase tracking-wider hover:opacity-90 active:scale-95 transition-all">Hire Me</button>
+</div>
+<!-- Mobile Menu Toggle (Simplified) -->
+<button class="md:hidden text-secondary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section / Personal Narrative -->
+<section class="py-section-padding overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-stack-lg items-center">
+<div class="md:col-span-7 space-y-stack-md">
+<span class="font-label-md text-label-md text-primary bg-primary-container/30 px-4 py-1 rounded-full uppercase tracking-widest">The Journey</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background leading-tight text-balance">
+            Bridging Logic with <span class="text-primary italic">Human Connection</span>.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            I am Dona Remeticado, an IT student at Davao del Norte State College. My journey isn't just about lines of code; it's about crafting technical solutions that feel warm, accessible, and deeply human.
+          </p>
+<p class="font-body-md text-body-md text-secondary">
+            Born from a curiosity for how systems work, my path at DNSC has evolved into a passion for software craftsmanship. I believe that technology serves its best purpose when it remains invisible—facilitating seamless experiences without the cold friction often associated with "IT."
+          </p>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-square rounded-2xl overflow-hidden ambient-shadow relative z-10">
+<img alt="Dona Remeticado" class="w-full h-full object-cover grayscale-[20%] contrast-[1.1]" data-alt="A professional yet warm portrait of a young woman of Asian descent, representing Dona Remeticado. She is smiling gently at the camera in a modern, sun-drenched architectural space with soft wood accents. The lighting is high-key and airy, emphasizing a light-mode aesthetic. The composition is clean and minimalist, echoing a sense of approachable technical expertise and modern corporate professionalism." src="pic.jpg"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-6 -right-6 w-48 h-48 bg-primary-container rounded-2xl -z-0 opacity-50 blur-xl"></div>
+</div>
+</div>
+</section>
+<!-- Education & Institutions -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface">Foundations</h2>
+<div class="w-12 h-1 bg-primary mt-2"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="p-8 bg-surface-container-lowest rounded-xl ghost-outline ambient-shadow flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary text-4xl">school</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm">Davao del Norte State College</h3>
+<p class="font-label-md text-label-md text-secondary">Panabo City, Philippines</p>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Currently pursuing a Bachelor of Science in Information Technology. Focusing on software development, systems analysis, and human-computer interaction.
+              </p>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant flex justify-between items-center">
+<span class="font-label-md text-label-md text-primary bg-primary-container px-3 py-1 rounded">2021 — Present</span>
+<span class="font-label-md text-label-md text-secondary">Dean's Lister Candidate</span>
+</div>
+</div>
+<div class="p-8 bg-surface-container-lowest rounded-xl ghost-outline hover:ambient-shadow transition-all group">
+<h3 class="font-headline-sm text-headline-sm mb-4">Academic Highlights</h3>
+<ul class="space-y-4">
+<li class="flex gap-4">
+<span class="text-tertiary font-bold">•</span>
+<span class="text-on-surface-variant">Active participation in regional IT hackathons, focusing on UI/UX optimization.</span>
+</li>
+<li class="flex gap-4">
+<span class="text-tertiary font-bold">•</span>
+<span class="text-on-surface-variant">Member of the Student IT Society, facilitating peer-to-peer coding workshops.</span>
+</li>
+<li class="flex gap-4">
+<span class="text-tertiary font-bold">•</span>
+<span class="text-on-surface-variant">Lead developer for a community-based capstone project involving resource management.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Bento Grid -->
+<section class="py-section-padding">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-on-surface">Expertise & Tools</h2>
+<p class="font-body-md text-body-md text-secondary mt-2">A balance of technical prowess and collaborative empathy.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Technical Skills -->
+<div class="md:col-span-2 bg-surface-container rounded-xl p-8 flex flex-col gap-6">
+<h3 class="font-headline-sm text-headline-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">terminal</span>
+              Technical Proficiency
+            </h3>
+<div class="flex flex-wrap gap-3">
+<span class="bg-surface-container-lowest px-4 py-2 rounded ghost-outline font-label-md text-label-md text-primary">JAVASCRIPT</span>
+<span class="bg-surface-container-lowest px-4 py-2 rounded ghost-outline font-label-md text-label-md text-primary">PYTHON</span>
+<span class="bg-surface-container-lowest px-4 py-2 rounded ghost-outline font-label-md text-label-md text-primary">REACT.JS</span>
+<span class="bg-surface-container-lowest px-4 py-2 rounded ghost-outline font-label-md text-label-md text-primary">TAILWIND CSS</span>
+<span class="bg-surface-container-lowest px-4 py-2 rounded ghost-outline font-label-md text-label-md text-primary">SQL</span>
+<span class="bg-surface-container-lowest px-4 py-2 rounded ghost-outline font-label-md text-label-md text-primary">GIT</span>
+<span class="bg-surface-container-lowest px-4 py-2 rounded ghost-outline font-label-md text-label-md text-primary">REST APIS</span>
+<span class="bg-surface-container-lowest px-4 py-2 rounded ghost-outline font-label-md text-label-md text-primary">PHP / LARAVEL</span>
+</div>
+<div class="mt-auto pt-6 border-t border-outline-variant/30">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Passionate about clean, maintainable code and performance-first architecture. Currently exploring the intersection of AI and frontend development.
+              </p>
+</div>
+</div>
+<!-- Soft Skills -->
+<div class="bg-tertiary-container text-on-tertiary-container rounded-xl p-8 flex flex-col gap-6">
+<h3 class="font-headline-sm text-headline-sm flex items-center gap-2">
+<span class="material-symbols-outlined">psychology</span>
+              Core Strengths
+            </h3>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-body-md">Systems Thinking</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-body-md">Empathetic Communication</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-body-md">Rapid Prototyping</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<span class="font-body-md">Documentation</span>
+</li>
+</ul>
+</div>
+<!-- Design/UX -->
+<div class="bg-secondary-container text-on-secondary-container rounded-xl p-8 flex flex-col gap-6 md:order-last">
+<h3 class="font-headline-sm text-headline-sm flex items-center gap-2">
+<span class="material-symbols-outlined">draw</span>
+              UI/UX Focus
+            </h3>
+<p class="font-body-md text-body-md">
+              Bridging the gap between design and development with Figma and high-fidelity prototyping.
             </p>
-    </div>
-    <footer>
-        <p>© 2024 Dona Remeticado | All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<div class="grid grid-cols-2 gap-2 mt-auto">
+<div class="bg-surface-container-lowest/50 p-3 rounded text-center">
+<span class="font-label-md text-label-md block">FIGMA</span>
+</div>
+<div class="bg-surface-container-lowest/50 p-3 rounded text-center">
+<span class="font-label-md text-label-md block">ADOBE XD</span>
+</div>
+</div>
+</div>
+<!-- Visual Accents / Image -->
+<div class="md:col-span-2 rounded-xl overflow-hidden h-64 relative group">
+<img alt="Workspace" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A top-down aesthetic view of a clean, minimalist workspace featuring a high-end laptop, a cup of coffee, and a notebook with handwritten code diagrams. The lighting is soft and natural, with a focus on warm textures and a neutral color palette of beige and light gray. The overall mood is focused and serene, suggesting a high level of modern craftsmanship and organized technical thought." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrOCEaYhTnrzwd_cgY9eaXVOocm9sd4Mkndohcpsh8mYIaYjJHCyQx0xql70421aYmn071fvCTatjIN1ogJCM4FNFYZfoX6cYmUMfheXvA4mZpB6ZpxPKqKxhs5KePZT6W3KECx8Fxrtf6RnW2y5rleVkmPaHTjbBSP73SPlvx0P-9wnlGG-IhbxI--bqaPX56QJ4jgptZyoUbKPaPnDLfKdR3Gkv0g0RJoZlkhc0ZqjK6md2PuSSQf29fHyl8hcakZcM-IdZT9kc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-8">
+<p class="text-white font-headline-sm">"Code is poetry for machines, but it must be readable for humans."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-section-padding bg-surface-container-highest">
+<div class="max-w-container-max mx-auto px-gutter text-center">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6">Let's build something meaningful together.</h2>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-secondary text-surface px-10 py-4 rounded-full font-nav-link text-nav-link uppercase tracking-wider hover:opacity-90 transition-all">View My Projects</button>
+<button class="border border-secondary text-secondary px-10 py-4 rounded-full font-nav-link text-nav-link uppercase tracking-wider hover:bg-secondary hover:text-surface transition-all">Download CV</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-inverse-surface w-full py-section-padding">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="text-center md:text-left">
+<div class="font-headline-sm text-headline-sm text-secondary dark:text-secondary-fixed mb-2">Dona Remeticado</div>
+<p class="font-body-md text-body-md text-on-secondary-container/70 dark:text-on-secondary-fixed-variant/70">
+          © 2024 Dona Remeticado. Built with technical warmth.
+        </p>
+</div>
+<div class="flex gap-6">
+<a class="font-body-md text-body-md text-on-secondary-container/70 dark:text-on-secondary-fixed-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">LinkedIn</a>
+<a class="font-body-md text-body-md text-on-secondary-container/70 dark:text-on-secondary-fixed-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">GitHub</a>
+<a class="font-body-md text-body-md text-on-secondary-container/70 dark:text-on-secondary-fixed-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Twitter</a>
+<a class="font-body-md text-body-md text-on-secondary-container/70 dark:text-on-secondary-fixed-variant/70 hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Email</a>
+</div>
+</div>
+</footer>
+<script>
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+        }
+      });
+    }, observerOptions);
+
+    // Apply animation classes to sections
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+      observer.observe(section);
+    });
+
+    // Initial state for immediate view
+    window.addEventListener('load', () => {
+      const firstSection = document.querySelector('section');
+      if (firstSection) {
+        firstSection.classList.remove('opacity-0', 'translate-y-10');
+        firstSection.classList.add('opacity-100', 'translate-y-0');
+      }
+    });
+  </script>
+</body></html>
