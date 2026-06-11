@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="en"><head>
+<html class="scroll-smooth" lang="en" style=""><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Projects | Dona R.</title>
@@ -116,7 +116,7 @@
         .ambient-shadow {
             box-shadow: 0 8px 30px rgba(26, 26, 26, 0.06);
         }
-        .project-card:hover .project-image {
+        .project-card:hover .project-image, .certificate-card:hover .certificate-image {
             transform: scale(1.03);
         }
         .ghost-outline {
@@ -161,18 +161,22 @@
 </head>
 <body class="font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md">
 <div class="max-w-container-max mx-auto px-gutter h-20 flex justify-between items-center">
-<span class="font-headline-sm text-headline-sm font-bold text-secondary dark:text-secondary-fixed">Dona R.</span>
-<div class="hidden md:flex items-center gap-stack-md">
-<a class="font-nav-link text-nav-link uppercase tracking-wider text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="index.html">Home</a>
-<a class="font-nav-link text-nav-link uppercase tracking-wider text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="about.html">About</a>
-<a class="font-nav-link text-nav-link uppercase tracking-wider text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="project.html">Projects</a>
-<a class="font-nav-link text-nav-link uppercase tracking-wider text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="contact.html">Contact</a>
-<button class="ml-4 px-6 py-2 bg-secondary text-on-secondary rounded-full font-nav-link text-nav-link hover:opacity-90 transition-all active:scale-95">Hire Me</button>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">Dona R.</span>
+<div class="hidden md:flex items-center gap-stack-lg">
+<div class="flex gap-8">
+<a class="font-nav-link text-nav-link uppercase tracking-wider text-secondary hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="font-nav-link text-nav-link uppercase tracking-wider text-secondary hover:text-primary transition-colors" href="about.html">About</a>
+<a class="font-nav-link text-nav-link uppercase tracking-wider text-primary font-bold border-b-2 border-primary pb-1" href="project.html">Projects</a>
+<a class="font-nav-link text-nav-link uppercase tracking-wider text-secondary hover:text-primary transition-colors" href="contact.html">Contact</a>
+</div>
+<button class="bg-secondary text-surface px-6 py-2 rounded-full font-nav-link text-nav-link hover:opacity-90 active:scale-95 transition-all">
+                    Hire Me
+                </button>
 </div>
 <!-- Mobile Menu Toggle -->
-<button id="mobile-menu-btn" class="md:hidden p-2 text-secondary z-50">
+<button id="mobile-menu-btn" class="md:hidden text-secondary z-50">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -200,10 +204,10 @@
 </div>
 </header>
 <!-- Projects Grid -->
-<section class="max-w-container-max mx-auto px-gutter">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12"><article class="project-card group flex flex-col gap-6 cursor-pointer transition-all duration-700 opacity-0 translate-y-10">
+<section class="max-w-container-max mx-auto px-gutter mb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12"><article class="project-card group flex flex-col gap-6 cursor-pointer transition-all duration-700 opacity-100 translate-y-0">
 <div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-surface-container-low ghost-outline">
-<img alt="Smart Laboratory Management System" class="project-image w-full h-full object-cover transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPDjtgdN-S9AnTwzb1e81YiygKnVvHrEzfIHDmMzhNWFwZS1fhw64L8-bc_2brdjhdqLFksc6dU5qG8XVcWjlOH1yGlbJTo6lECsCHFIFouc8U2Mi7eqaVaCt1C2UPnIX-iOYekQ9a5HQwRXEKOod1bMK2libI61QBElz2kBNrwO35OI4VOtTNcRfwepOsiaSh3w1MF1JVifQ5d5Wrdyfa4Orr7Xq7-c7bKPxhYjzIg0BT3AfTe7q1n3GfFnXiU5yiG-61DDQL9kY"/>
+<img alt="Smart Laboratory Management System" class="project-image w-full h-full object-cover transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPDjtgdN-S9AnTwzb1e81YiygKnVvHrEzfIHDmMzhNWFwZS1fhw64L8-bc_2brdjhdqLFksc6dU5qG8XVcWjlOH1yGlbJTo6lECsCHFIFouc8U2Mi7eqaVaCt1C2UPnIX-iOYekQ9a5HQwRXEKOod1bMK2libI61QBElz2kBNrwO35OI4VOtTNcRfwepOsiaSh3w1MF1JVifQ5d5Wrdyfa4Orr7Xq7-c7bKPxhYjzIg0BT3AfTe7q1n3GfFnXiU5yiG-61DDQL9kY" style="transform: scale(1);"/>
 </div>
 <div class="flex flex-col gap-3">
 <div class="flex flex-wrap gap-2">
@@ -219,23 +223,83 @@
 </div>
 </article>
 <!-- Project 1 -->
-<article class="project-card group flex flex-col gap-6 cursor-pointer">
+<!-- Project 2 -->
+<article class="project-card group flex flex-col gap-6 cursor-pointer transition-all duration-700 opacity-100 translate-y-0">
 <div class="relative aspect-[16/10] overflow-hidden rounded-xl bg-surface-container-low ghost-outline">
-<img alt="Analytics Dashboard" class="project-image w-full h-full object-cover transition-transform duration-500 ease-out" data-alt="A clean, professional interface of a modern analytics dashboard displayed on a high-resolution monitor. The UI features elegant line charts and data visualizations in soft primary browns and neutral grays, consistent with a minimalist IT portfolio style. The lighting is bright and natural, suggesting an airy, sophisticated office environment with warm, paper-like background tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY7qBjl1IYDSFyFlrL1U1wyhG1hIVsp8BTs_X5_1-_lnNb0c8Ks0UjtBalnSKtZWNfjs0R1WhlN4M_3hPL4BHPKqLrAjfdU9ZdaUoaeZNhZEcoSJiUmOpFS_aAkwFjSPKDic6vK-Z9wTCHv_-HY_ZqQ_3KmMLIh0pf1YVfMAQ65adlzn6DD3UmpEz4BvtvpuMTn2k0NDAGFVwe4TV_CJ_ugiiJxOWIlUwdiYfmjtEPR3EECAl8z1MpW2YEaIP4L55P_b5Uyq21Z9U"/>
+<img alt="Mobile App Interface" class="project-image w-full h-full object-cover transition-transform duration-500 ease-out" data-alt="Close-up shot of a smartphone showcasing a beautifully designed mobile application for smart home management. The app interface uses a soft, warm color palette of cream and deep charcoal, with rounded components and crisp typography. The background shows a modern, minimalist living room softly blurred, creating a mood of reliability, technical craftsmanship, and sophisticated domestic warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqRHKlXLSfwmRGJgVP1wwuCzjRW3jbjyyCMdt3amp9NgfUic3ENpjTgrPzAs5dwdQtX3EbCGaQX0IZKxfBjco7s18SECPDwkje8QDvEO5KBgph6IfOKS1JYkTLssWvsllrOKE2YTCRat4e48vdJ6F8p-OVmJe4X4SuD0qTNCltanXy5ZNFHhREQokHDKdtt4yl8eWu2C58La4TmV442vku3qUtE4Kt4GFMXoK_Ycc2PR2KWT_Y81ObGx3ynKeM97HlRS5DTbhJwDM" style="transform: scale(1);"/>
 </div>
 <div class="flex flex-col gap-3">
 <div class="flex flex-wrap gap-2">
-<span class="font-label-md text-label-md px-3 py-1 bg-primary-container text-on-primary-container rounded-sm">PYTHON</span>
-<span class="font-label-md text-label-md px-3 py-1 bg-surface-container-high text-secondary rounded-sm">REACT</span>
-<span class="font-label-md text-label-md px-3 py-1 bg-surface-container-high text-secondary rounded-sm">AWS</span>
+<span class="font-label-md text-label-md px-3 py-1 bg-primary-container text-on-primary-container rounded-sm">SWIFT</span>
+<span class="font-label-md text-label-md px-3 py-1 bg-surface-container-high text-secondary rounded-sm">GOLANG</span>
+<span class="font-label-md text-label-md px-3 py-1 bg-surface-container-high text-secondary rounded-sm">MQTT</span>
 </div>
-<h2 class="font-headline-sm text-headline-sm text-main group-hover:text-primary transition-colors">NeuralMetrics Infrastructure</h2>
+<h2 class="font-headline-sm text-headline-sm text-main group-hover:text-primary transition-colors">Habitat OS</h2>
 <p class="font-body-md text-body-md text-secondary max-w-lg">
-                            An enterprise-grade data pipeline and visualization suite designed for real-time monitoring of machine learning model performance.
+                            Reimagining the smart home experience through a centralized IoT hub that prioritizes user privacy and seamless connectivity.
                         </p>
 </div>
 </article>
-
+</div>
+</section>
+<!-- Certifications & Achievements Section -->
+<section class="max-w-container-max mx-auto px-gutter mb-24">
+<div class="mb-12">
+<h2 class="font-display-lg text-headline-md md:text-headline-md text-main mb-4">Certifications &amp; <span class="text-primary italic">Achievements</span></h2>
+<p class="font-body-md text-body-md text-secondary max-w-2xl">
+            A testament to continuous learning and professional growth in the fields of software engineering and design.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Cert 1 -->
+<article class="certificate-card group flex flex-col gap-4 cursor-pointer">
+<div class="relative aspect-[1.414/1] overflow-hidden rounded-xl bg-surface-container-low ghost-outline ambient-shadow">
+<img alt="Advanced Seminar Series" class="certificate-image w-full h-full object-cover transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvjOlo-7rFzErBuLXBzhGAjWuHkvlkFaFYZptH82s5aGpGA5nkmUblJjTJo9QhWr9Y-jA7rInLC-1InTAlht2dSMeckaaE_uFVXV-LewSip9_jZu2mNt3mMq_TqQfVDp6DrxR_TNK6ckYy-9toWNsovhzbRkuXaDcrp_HKNyx7FBq_UyagDqG8cLO_SDyRIvvHOinroqWzWv5RsIgxnAyWGT-KicOP7VCLdIWf6FR27k889xN6eSmtbooSrEpYDoOHLFdmyfA-mt4"/>
+</div>
+<h3 class="font-headline-sm text-lg text-main group-hover:text-primary transition-colors px-1">Advanced Seminar Series</h3>
+</article>
+<!-- Cert 2 -->
+<article class="certificate-card group flex flex-col gap-4 cursor-pointer">
+<div class="relative aspect-[1.414/1] overflow-hidden rounded-xl bg-surface-container-low ghost-outline ambient-shadow">
+<img alt="User Experience Questionnaire" class="certificate-image w-full h-full object-cover transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lROnDQNDlNRHKYsAclTsKf-WryEiAzfO178oZgRGbS10G8nwlu_w_NeKDOI55BSmS0WTR3Ip8oqJ0Cn7eaRn-8fn_bGsCV5uV55QhQearkfeaUaQEwpC-Vhjp7HZe-5mezqhp5YMRMo8Y9Vx4v9NYLVEiz6T7Q7pmDjhorMJAXrW4iIOBZcsSA2ZSCGcwq6_edeU9Ps6UM17J_zsCPZ-aXQ1L50S_ZBHAHpFaa5tl-w9-kldVLlzu8_BKbl1nyB5yAV9DBVFuck"/>
+</div>
+<h3 class="font-headline-sm text-lg text-main group-hover:text-primary transition-colors px-1">User Experience Questionnaire</h3>
+</article>
+<!-- Cert 3 -->
+<article class="certificate-card group flex flex-col gap-4 cursor-pointer">
+<div class="relative aspect-[1.414/1] overflow-hidden rounded-xl bg-surface-container-low ghost-outline ambient-shadow">
+<img alt="Advanced Seminar Series" class="certificate-image w-full h-full object-cover transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvV7MaZMYDWRqlQ_BzHFmqjwgx3cGyyziQmzAZeDi8edXCqR8TJfg85QQra13kT2tpIHVzmAT7CzXmVHNbWedcQfqk59AYC1fzpuBntXFM2dJvyeLaD_3HbkkZmPpsb2sqm3Xp4jRcG3sIh9YsNNmYLCUSjYkJ-jNdRgR4wZXEHTv2QYMEN058YNkqPXUf1mNAq_v2ZNt-ZYiK6Y9c5BNq3VcQFkY6YsgbjXMKr1GXzad_RLx32yFrOBZTFqJdpnsOPhUrzw8rhnY"/>
+</div>
+<h3 class="font-headline-sm text-lg text-main group-hover:text-primary transition-colors px-1">Advanced Seminar Series</h3>
+</article>
+<!-- Cert 4 -->
+<article class="certificate-card group flex flex-col gap-4 cursor-pointer">
+<div class="relative aspect-[1.414/1] overflow-hidden rounded-xl bg-surface-container-low ghost-outline ambient-shadow">
+<img alt="SmartLab Capstone" class="certificate-image w-full h-full object-cover transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASuxCeCqLNpPHO54EUlq0nygteStnfcuMUVf3-0DlTpqCjlP2AJxBxRlomiZqCipnt9UtpSZl9aXoI3p38hMhSRsKPKgjlJBa1zDmwYFE8fA5YDBcv4omoXbDjDdT4leTVr0qocp0voXxG8EMJlP3Q5m2HFvR0hBcixQBmixCNEh8HhTk3eoUYn2IodRcKohvpCa7UdnAmz85o2LRT5iib2w31bbiY-FbGYVbQmLCzbDR2pgsJIz0OtXJWUEIfpSoRqINzgvBSekw"/>
+</div>
+<h3 class="font-headline-sm text-lg text-main group-hover:text-primary transition-colors px-1">SmartLab Capstone</h3>
+</article>
+<!-- Cert 5 -->
+<article class="certificate-card group flex flex-col gap-4 cursor-pointer">
+<div class="relative aspect-[1.414/1] overflow-hidden rounded-xl bg-surface-container-low ghost-outline ambient-shadow">
+<img alt="Zenova Connect" class="certificate-image w-full h-full object-cover transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPO3TiuWdGeKltMS9rOflMOPGZJdCz1mgNjiKm4hxaUtHzk9SjkGD-bHrcHA0c-LLwTg453Phg9nMzcofDJyvhGLZl9dXiu6S314TH4dzcwkBVULnRv3Ll3tPCCGBEzuKrXE3LwFo9FzqDmAYTiQSLzhCIDIXiMSnVyo3PsaSJV2nCy3r7vmvSySHqxSHJqbAolW0RiDtRDTBHsMcMiestSK3kuEBqtwsdDcjknGi9eQ4xstnXDYlUOkl9fDJH6gCW8JXPxGqTztM"/>
+</div>
+<h3 class="font-headline-sm text-lg text-main group-hover:text-primary transition-colors px-1">Zenova Connect</h3>
+</article>
+<!-- Cert 6 -->
+<article class="certificate-card group flex flex-col gap-4 cursor-pointer">
+<div class="relative aspect-[1.414/1] overflow-hidden rounded-xl bg-surface-container-low ghost-outline ambient-shadow">
+<img alt="Pitching Finalist" class="certificate-image w-full h-full object-cover transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzJZ4-fy4GqaZ3-tPm5ax1edB6mryOf0NI8XQzYeF-It98E2jU0vmC-FRStCkQu6hkqcvv01MPnw-OvaLyL135cvGvAwK3_ZWjU-kdMpFKlynLe6XoU0qtJm5iU27WbLDW6ajYr0OJmeBFAfu74KMtP7vcUOA71Yjd9Lp7gZ-nhp2J7WQYoX72oeEyqP1bNcFMQf535d-adAJUvA0nJOfDopzsAVfDYX0rJYdAAiyQxq-xbI3u0sg9bgDqp9DRFG6uH1-N0pkcOGc"/>
+</div>
+<h3 class="font-headline-sm text-lg text-main group-hover:text-primary transition-colors px-1">Pitching Finalist</h3>
+</article>
+<!-- Cert 7 -->
+<article class="certificate-card group flex flex-col gap-4 cursor-pointer">
+<div class="relative aspect-[1.414/1] overflow-hidden rounded-xl bg-surface-container-low ghost-outline ambient-shadow">
+<img alt="Capstone Project Exhibit" class="certificate-image w-full h-full object-cover transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY78Ay4TfC3QhSMz7J8wsnIpltIf-FxmAeSLrKSOo76C8P1rFEy194oTztItchR727YAnmPhewidW9TicmSWyHMVfB1zW86z7HlUsc9GvGMHjvmGhfsblQFu41lXyaDDpGVsQXlYW3SjJLTe5NswF75mHBL8Oh59ZXncKaukrRGRaZI_yhO6RulO67pb2XkpZQpvV20JKPcVVUAWFtkqEh7Kk9LbEO_nJvw-LT7ykWpQXBcK3qSznjukSWWQdEgiH-XR8WoUkjoak"/>
+</div>
+<h3 class="font-headline-sm text-lg text-main group-hover:text-primary transition-colors px-1">Capstone Project Exhibit</h3>
+</article>
 </div>
 </section>
 <!-- CTA Section -->
@@ -270,39 +334,14 @@
 </div>
 </footer>
 <script>
-        // Hamburger menu toggle
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuLinks = mobileMenu.querySelectorAll('a');
-
-            // Toggle menu on button click
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-
-            // Close menu when a link is clicked
-            menuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-
-            // Close menu when clicking outside
-            document.addEventListener('click', (event) => {
-                if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-
-        // Micro-interaction for project cards
-        document.querySelectorAll('.project-card').forEach(card => {
+        // Micro-interaction for cards
+        document.querySelectorAll('.project-card, .certificate-card').forEach(card => {
+            const img = card.querySelector('.project-image, .certificate-image');
             card.addEventListener('mouseenter', () => {
-                card.querySelector('.project-image').style.transform = 'scale(1.05)';
+                if (img) img.style.transform = 'scale(1.05)';
             });
             card.addEventListener('mouseleave', () => {
-                card.querySelector('.project-image').style.transform = 'scale(1)';
+                if (img) img.style.transform = 'scale(1)';
             });
         });
 
@@ -320,9 +359,24 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.project-card').forEach(el => {
+        document.querySelectorAll('.project-card, .certificate-card').forEach(el => {
             el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
             observer.observe(el);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a, #mobile-menu button').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
         });
     </script>
 </body></html>
